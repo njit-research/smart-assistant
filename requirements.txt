@@ -1,0 +1,18 @@
+PYTHON + BASE:
+sudo apt update
+sudo apt install -y python3 python3-pip build-essential cmake
+
+PYTHON PACKAGES:
+pip3 install llama-cpp-python numpy google-api-python-client google-auth google-auth-oauthlib pyttsx3 SpeechRecognition
+
+AUDIO SUPPORT:
+sudo apt install -y portaudio19-dev alsa-utils
+pip3 install pyaudio
+
+MODEL FILES;
+cd ~/smart_assistant/models
+wget https://huggingface.co/google/gemma-2b-it-GGUF/resolve/main/gemma-2-9b-it.Q4_K_M.gguf -O gemma-2-9b.Q4_K_M.gguf
+
+GPIO FOR ULTRASONIC:
+pip3 install RPi.GPIO
+
